@@ -1,0 +1,1578 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Socialize\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-11-29 09:16-0000\n"
+"PO-Revision-Date: 2016-11-29 09:16-0000\n"
+"Last-Translator: GhostPool\n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;esc_attr_e;_n_noop:1,2;"
+"esc_html__;esc_html_e\n"
+"X-Poedit-Basepath: ./\n"
+"X-Generator: Poedit 1.7.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:14
+msgid "Page Not Found"
+msgstr ""
+
+#: ../404.php:18
+msgid "Oops, it looks like this page does not exist."
+msgstr ""
+
+#: ../404.php:23
+msgid "If you are lost use the search form below or visit our"
+msgstr ""
+
+#: ../404.php:23
+msgid "homepage."
+msgstr ""
+
+#: ../bbpress/loop-forums.php:20
+msgid "Forum"
+msgstr ""
+
+#: ../bbpress/loop-forums.php:21 ../bbpress/loop-single-forum.php:59
+#: ../bbpress/loop-single-forum.php:77
+msgid "Topics"
+msgstr ""
+
+#: ../bbpress/loop-forums.php:22
+msgid "Replies"
+msgstr ""
+
+#: ../bbpress/loop-forums.php:22 ../bbpress/loop-single-forum.php:61
+#: ../bbpress/loop-single-forum.php:78
+msgid "Posts"
+msgstr ""
+
+#: ../bbpress/loop-forums.php:23
+msgid "Freshness"
+msgstr ""
+
+#: ../blog-template.php:83 ../index.php:54 ../lib/inc/ajax.php:324
+#: ../lib/widgets/recent-posts.php:98 ../portfolio-template.php:107
+#: ../search.php:72 ../taxonomy-gp_portfolios.php:67
+msgid "No items found."
+msgstr ""
+
+#: ../buddypress/groups/groups-loop.php:78
+#, php-format
+msgid "active %s"
+msgstr ""
+
+#: ../buddypress/groups/groups-loop.php:131
+msgid "There were no groups found."
+msgstr ""
+
+#: ../comments.php:19
+msgid "Pingback:"
+msgstr ""
+
+#: ../comments.php:34
+msgid "Your comment is awaiting approval."
+msgstr ""
+
+#: ../comments.php:54
+msgid "Reply"
+msgstr ""
+
+#: ../comments.php:70 ../lib/sections/entry-meta.php:27
+#: ../lib/sections/loop-meta.php:9
+msgid "No Comments"
+msgstr ""
+
+#: ../comments.php:70 ../lib/sections/entry-meta.php:27
+#: ../lib/sections/loop-meta.php:9
+msgid "1 Comment"
+msgstr ""
+
+#: ../comments.php:70 ../lib/sections/entry-meta.php:27
+#: ../lib/sections/loop-meta.php:9
+msgid "% Comments"
+msgstr ""
+
+#: ../comments.php:81
+msgid "Comments are now closed for this post."
+msgstr ""
+
+#: ../comments.php:89
+#, php-format
+msgid "Required fields are marked %s"
+msgstr ""
+
+#: ../comments.php:100
+msgid "Leave a Reply"
+msgstr ""
+
+#: ../comments.php:101
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr ""
+
+#: ../comments.php:102
+msgid "Cancel Reply"
+msgstr ""
+
+#: ../comments.php:103
+msgid "Post Comment"
+msgstr ""
+
+#: ../comments.php:105
+msgid "Comment"
+msgstr ""
+
+#: ../comments.php:107
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr ""
+
+#: ../comments.php:109
+#, php-format
+msgid ""
+"Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
+"this account\">Log out?</a>"
+msgstr ""
+
+#: ../comments.php:111
+msgid "Your email address will not be published. "
+msgstr ""
+
+#: ../comments.php:113
+#, php-format
+msgid ""
+"You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags "
+"and attributes: %s"
+msgstr ""
+
+#: ../comments.php:117
+msgid "Name"
+msgstr ""
+
+#: ../comments.php:119
+msgid "Email"
+msgstr ""
+
+#: ../comments.php:121
+msgid "Website"
+msgstr ""
+
+#: ../footer.php:89
+msgid "Copyright &copy;"
+msgstr ""
+
+#: ../footer.php:89
+msgid "GhostPool.com"
+msgstr ""
+
+#: ../footer.php:89
+msgid "All rights reserved."
+msgstr ""
+
+#: ../functions.php:55
+msgid "Primary Main Header Navigation"
+msgstr ""
+
+#: ../functions.php:56
+msgid "Secondary Main Header Navigation"
+msgstr ""
+
+#: ../functions.php:57
+msgid "Left Small Header Navigation"
+msgstr ""
+
+#: ../functions.php:58
+msgid "Right Small Header Navigation"
+msgstr ""
+
+#: ../functions.php:59
+msgid "Footer Navigation"
+msgstr ""
+
+#: ../functions.php:477 ../lib/inc/category-config.php:46
+#: ../lib/inc/category-config.php:57
+msgid "Left Sidebar"
+msgstr ""
+
+#: ../functions.php:479 ../functions.php:489 ../functions.php:570
+msgid "Displayed on posts, pages and post categories."
+msgstr ""
+
+#: ../functions.php:487 ../lib/inc/category-config.php:47
+#: ../lib/inc/category-config.php:69
+msgid "Right Sidebar"
+msgstr ""
+
+#: ../functions.php:497
+msgid "Homepage Left Sidebar"
+msgstr ""
+
+#: ../functions.php:499 ../functions.php:509
+msgid "Displayed on the homepage."
+msgstr ""
+
+#: ../functions.php:507
+msgid "Homepage Right Sidebar"
+msgstr ""
+
+#: ../functions.php:517
+msgid "Footer 1"
+msgstr ""
+
+#: ../functions.php:519
+msgid "Displayed as the first column in the footer."
+msgstr ""
+
+#: ../functions.php:527
+msgid "Footer 2"
+msgstr ""
+
+#: ../functions.php:529
+msgid "Displayed as the second column in the footer."
+msgstr ""
+
+#: ../functions.php:537
+msgid "Footer 3"
+msgstr ""
+
+#: ../functions.php:539
+msgid "Displayed as the third column in the footer."
+msgstr ""
+
+#: ../functions.php:547
+msgid "Footer 4"
+msgstr ""
+
+#: ../functions.php:549
+msgid "Displayed as the fourth column in the footer."
+msgstr ""
+
+#: ../functions.php:557
+msgid "Footer 5"
+msgstr ""
+
+#: ../functions.php:559
+msgid "Displayed as the fifth column in the footer."
+msgstr ""
+
+#: ../functions.php:568
+msgid "Standard Sidebar (Deprecated)"
+msgstr ""
+
+#: ../functions.php:603 ../post-loop.php:60
+msgid "Read More"
+msgstr ""
+
+#: ../functions.php:652
+msgid "To view this protected post, enter the password below:"
+msgstr ""
+
+#: ../functions.php:955
+msgid "You will receive an email with your new password."
+msgstr ""
+
+#: ../functions.php:971
+msgid ""
+"Before you can see the theme please install the latest version of the "
+"Socialize Plugin by"
+msgstr ""
+
+#: ../functions.php:971
+msgid "clicking here"
+msgstr ""
+
+#: ../functions.php:1033
+msgid "Socialize Plugin"
+msgstr ""
+
+#: ../functions.php:1043
+msgid "WPBakery Visual Composer"
+msgstr ""
+
+#: ../functions.php:1053
+msgid "Visual Sidebars Editor"
+msgstr ""
+
+#: ../functions.php:1063
+msgid "Theia Sticky Sidebar"
+msgstr ""
+
+#: ../functions.php:1073
+msgid "BuddyPress"
+msgstr ""
+
+#: ../functions.php:1079
+msgid "bbPress"
+msgstr ""
+
+#: ../functions.php:1085
+msgid "The Events Calendar"
+msgstr ""
+
+#: ../functions.php:1091
+msgid "Contact Form 7"
+msgstr ""
+
+#: ../functions.php:1097
+msgid "WordPress Social Login"
+msgstr ""
+
+#: ../functions.php:1103
+msgid "Captcha"
+msgstr ""
+
+#: ../functions.php:1109
+msgid "Post Views Counters"
+msgstr ""
+
+#: ../functions.php:1115
+msgid "Yoast SEO"
+msgstr ""
+
+#: ../index.php:25 ../lib/inc/page-headers.php:134
+#: ../taxonomy-gp_portfolios.php:24
+msgid "Archives"
+msgstr ""
+
+#: ../lib/inc/bbpress-functions.php:129 ../lib/inc/bbpress-functions.php:142
+msgid "by"
+msgstr ""
+
+#: ../lib/inc/category-config.php:15
+msgid "Page Header"
+msgstr ""
+
+#: ../lib/inc/category-config.php:16 ../lib/inc/category-config.php:41
+msgid "The page header on the page."
+msgstr ""
+
+#: ../lib/inc/category-config.php:20 ../lib/inc/category-config.php:45
+#: ../lib/inc/category-config.php:62 ../lib/inc/category-config.php:74
+#: ../lib/inc/category-config.php:86 ../lib/inc/category-config.php:107
+msgid "Default"
+msgstr ""
+
+#: ../lib/inc/category-config.php:21 ../lib/inc/category-config.php:88
+msgid "Standard"
+msgstr ""
+
+#: ../lib/inc/category-config.php:22 ../lib/inc/category-config.php:87
+msgid "Large"
+msgstr ""
+
+#: ../lib/inc/category-config.php:23 ../lib/inc/category-config.php:50
+msgid "Fullwidth"
+msgstr ""
+
+#: ../lib/inc/category-config.php:24
+msgid "Full Page"
+msgstr ""
+
+#: ../lib/inc/category-config.php:31
+msgid "Page Header Background"
+msgstr ""
+
+#: ../lib/inc/category-config.php:32
+msgid ""
+"The background of the page header. Enter an image URL that must be uploaded "
+"to the Media Library."
+msgstr ""
+
+#: ../lib/inc/category-config.php:40
+msgid "Page Layout"
+msgstr ""
+
+#: ../lib/inc/category-config.php:48
+msgid "Both Sidebars"
+msgstr ""
+
+#: ../lib/inc/category-config.php:49
+msgid "No Sidebars"
+msgstr ""
+
+#: ../lib/inc/category-config.php:58
+msgid "The left sidebar to display."
+msgstr ""
+
+#: ../lib/inc/category-config.php:70
+msgid "The right sidebar to display."
+msgstr ""
+
+#: ../lib/inc/category-config.php:81 ../lib/inc/category-config.php:102
+msgid "Format"
+msgstr ""
+
+#: ../lib/inc/category-config.php:82 ../lib/inc/category-config.php:103
+msgid "The format to display the items in."
+msgstr ""
+
+#: ../lib/inc/category-config.php:89
+#: ../lib/menus/menu-item-custom-fields.php:153
+msgid "1 Column"
+msgstr ""
+
+#: ../lib/inc/category-config.php:90 ../lib/inc/category-config.php:108
+#: ../lib/menus/menu-item-custom-fields.php:154
+msgid "2 Columns"
+msgstr ""
+
+#: ../lib/inc/category-config.php:91 ../lib/inc/category-config.php:109
+#: ../lib/menus/menu-item-custom-fields.php:155
+msgid "3 Columns"
+msgstr ""
+
+#: ../lib/inc/category-config.php:92 ../lib/inc/category-config.php:110
+#: ../lib/menus/menu-item-custom-fields.php:156
+msgid "4 Columns"
+msgstr ""
+
+#: ../lib/inc/category-config.php:93 ../lib/inc/category-config.php:111
+#: ../lib/menus/menu-item-custom-fields.php:157
+msgid "5 Columns"
+msgstr ""
+
+#: ../lib/inc/category-config.php:94 ../lib/inc/category-config.php:112
+msgid "6 Columns"
+msgstr ""
+
+#: ../lib/inc/category-config.php:95 ../lib/inc/category-config.php:113
+msgid "Masonry"
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:327
+msgid "Install Required Plugins"
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:328
+msgid "Install Plugins"
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:330
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:332
+#, php-format
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:333
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:336
+#, php-format
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:342
+#, php-format
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:348
+#, php-format
+msgid ""
+"The following plugin needs to be updated to its latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgid_plural ""
+"The following plugins need to be updated to their latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:354
+#, php-format
+msgid "There is an update available for: %1$s."
+msgid_plural "There are updates available for the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:360
+#, php-format
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:366
+#, php-format
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:371
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:376
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:381
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:385
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:386
+#: ../lib/inc/class-tgm-plugin-activation.php:827
+#: ../lib/inc/class-tgm-plugin-activation.php:2533
+#: ../lib/inc/class-tgm-plugin-activation.php:3580
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:387
+#: ../lib/inc/class-tgm-plugin-activation.php:3159
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:388
+#: ../lib/inc/class-tgm-plugin-activation.php:2952
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:390
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:392
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:394
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:395
+msgid "Dismiss this notice"
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:396
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:397
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:523
+msgid "Update Required"
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:934
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:934
+#: ../lib/inc/class-tgm-plugin-activation.php:937
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:937
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:1982
+#, php-format
+msgid "TGMPA v%s"
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:2273
+msgid "Required"
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:2276
+msgid "Recommended"
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:2292
+msgid "WordPress Repository"
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:2295
+msgid "External Source"
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:2298
+msgid "Pre-Packaged"
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:2315
+msgid "Not Installed"
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:2319
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:2321
+msgid "Active"
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:2327
+msgid "Required Update not Available"
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:2330
+msgid "Requires Update"
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:2333
+msgid "Update recommended"
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:2342
+#, php-format
+msgctxt "Install/Update Status"
+msgid "%1$s, %2$s"
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:2392
+#, php-format
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:2396
+#, php-format
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:2400
+#, php-format
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:2482
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:2490
+msgid "Installed version:"
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:2498
+msgid "Minimum required version:"
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:2510
+msgid "Available version:"
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:2533
+msgid "No plugins to install, update or activate."
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:2547
+msgid "Plugin"
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:2548
+msgid "Source"
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:2549
+msgid "Type"
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:2553
+msgid "Version"
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:2554
+msgid "Status"
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:2603
+#, php-format
+msgid "Install %2$s"
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:2608
+#, php-format
+msgid "Update %2$s"
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:2614
+#, php-format
+msgid "Activate %2$s"
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:2684
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:2717
+msgid "Install"
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:2723
+msgid "Update"
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:2726
+msgid "Activate"
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:2757
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:2759
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:2800
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:2802
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:2908
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:2934
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:3158
+msgid "Plugin activation failed."
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:3498
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:3501
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:3503
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:3507
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:3509
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:3509
+#: ../lib/inc/class-tgm-plugin-activation.php:3517
+msgid "Show Details"
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:3509
+#: ../lib/inc/class-tgm-plugin-activation.php:3517
+msgid "Hide Details"
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:3510
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:3512
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:3515
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:3517
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:3518
+msgid "All installations have been completed."
+msgstr ""
+
+#: ../lib/inc/class-tgm-plugin-activation.php:3520
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: ../lib/inc/default-vc-templates.php:14
+msgid "Homepage"
+msgstr ""
+
+#: ../lib/inc/default-vc-templates.php:16
+msgid "Latest Activity"
+msgstr ""
+
+#: ../lib/inc/default-vc-templates.php:16
+msgid "Featured News"
+msgstr ""
+
+#: ../lib/inc/default-vc-templates.php:16
+msgid "Entertainment"
+msgstr ""
+
+#: ../lib/inc/default-vc-templates.php:16
+msgid "Fashion"
+msgstr ""
+
+#: ../lib/inc/default-vc-templates.php:16
+msgid "Other News"
+msgstr ""
+
+#: ../lib/inc/default-vc-templates.php:27
+msgid "Right Homepage"
+msgstr ""
+
+#: ../lib/inc/default-vc-templates.php:29
+msgid "Join The Community"
+msgstr ""
+
+#: ../lib/inc/default-vc-templates.php:29
+msgid "Statistics"
+msgstr ""
+
+#: ../lib/inc/default-vc-templates.php:40
+msgid "Left Homepage"
+msgstr ""
+
+#: ../lib/inc/default-vc-templates.php:42
+msgid "Latest News"
+msgstr ""
+
+#: ../lib/inc/github.php:87 ../lib/inc/github.php:97
+msgid "Cheatin&#8217; huh?"
+msgstr ""
+
+#: ../lib/inc/github.php:294
+#, php-format
+msgid ""
+"%sActivate the Envato Market plugin%s to get updates for your ThemeForest "
+"and CodeCanyon items."
+msgstr ""
+
+#: ../lib/inc/github.php:305
+#, php-format
+msgid ""
+"%sInstall the Envato Market plugin%s to get updates for your ThemeForest and "
+"CodeCanyon items."
+msgstr ""
+
+#: ../lib/inc/login-settings.php:33
+msgid "Please enter your username and password."
+msgstr ""
+
+#: ../lib/inc/login-settings.php:36
+msgid "Please enter your username."
+msgstr ""
+
+#: ../lib/inc/login-settings.php:39
+msgid "Please enter your password."
+msgstr ""
+
+#: ../lib/inc/login-settings.php:52 ../lib/inc/login-settings.php:87
+msgid "Please complete the CAPTCHA."
+msgstr ""
+
+#: ../lib/inc/login-settings.php:55
+msgid "Invalid username and password."
+msgstr ""
+
+#: ../lib/inc/login-settings.php:58
+msgid "Invalid password."
+msgstr ""
+
+#: ../lib/inc/login-settings.php:83
+msgid "Please complete all fields."
+msgstr ""
+
+#: ../lib/inc/login-settings.php:91
+msgid "Your passwords do not match."
+msgstr ""
+
+#: ../lib/inc/login-settings.php:103
+msgid "This username is already registered."
+msgstr ""
+
+#: ../lib/inc/login-settings.php:106
+msgid "This email address is already registered."
+msgstr ""
+
+#: ../lib/inc/login-settings.php:111
+msgid "An email has been sent with your details."
+msgstr ""
+
+#: ../lib/inc/login-settings.php:148
+msgid "Your new password for the account at:"
+msgstr ""
+
+#: ../lib/inc/login-settings.php:150 ../lib/inc/login-settings.php:210
+#, php-format
+msgid "Username: %s"
+msgstr ""
+
+#: ../lib/inc/login-settings.php:151
+#, php-format
+msgid "Password: %s"
+msgstr ""
+
+#: ../lib/inc/login-settings.php:153
+msgid "Your new password"
+msgstr ""
+
+#: ../lib/inc/login-settings.php:154
+msgid "Email failed to send for some unknown reason"
+msgstr ""
+
+#: ../lib/inc/login-settings.php:177
+msgid "Please enter your username or email address"
+msgstr ""
+
+#: ../lib/inc/login-settings.php:186
+msgid "Invalid email address"
+msgstr ""
+
+#: ../lib/inc/login-settings.php:192
+msgid "Invalid username"
+msgstr ""
+
+#: ../lib/inc/login-settings.php:208
+msgid "Someone requested that the password be reset for the following account:"
+msgstr ""
+
+#: ../lib/inc/login-settings.php:211
+msgid "If this was a mistake, just ignore this email and nothing will happen."
+msgstr ""
+
+#: ../lib/inc/login-settings.php:212
+msgid "To reset your password, visit the following address:"
+msgstr ""
+
+#: ../lib/inc/login-settings.php:214
+msgid "You will receive another email with your new password."
+msgstr ""
+
+#: ../lib/inc/login-settings.php:218
+msgid "Password reset request"
+msgstr ""
+
+#: ../lib/inc/login-settings.php:219
+msgid "Email failed to send for some unknown reason."
+msgstr ""
+
+#: ../lib/inc/login-settings.php:222
+msgid ""
+"We have just sent you an email with instructions to reset your password."
+msgstr ""
+
+#: ../lib/inc/wc-functions.php:55
+msgid "View your shopping cart"
+msgstr ""
+
+#: ../lib/inc/wc-functions.php:56 ../lib/inc/wc-functions.php:72
+#, php-format
+msgid "%d"
+msgid_plural "%d"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../lib/menus/custom-menu-walker.php:162 ../lib/sections/filter.php:22
+#: ../portfolio-template.php:69 ../taxonomy-gp_portfolios.php:38
+msgid "All"
+msgstr ""
+
+#: ../lib/menus/menu-item-custom-fields.php:70
+msgid "Menu Type"
+msgstr ""
+
+#: ../lib/menus/menu-item-custom-fields.php:71
+msgid "Columns"
+msgstr ""
+
+#: ../lib/menus/menu-item-custom-fields.php:72
+msgid "Device Display"
+msgstr ""
+
+#: ../lib/menus/menu-item-custom-fields.php:73
+msgid "Logged In/Out Display"
+msgstr ""
+
+#: ../lib/menus/menu-item-custom-fields.php:74
+msgid "Hide Navigation Label"
+msgstr ""
+
+#: ../lib/menus/menu-item-custom-fields.php:75
+msgid "Content"
+msgstr ""
+
+#: ../lib/menus/menu-item-custom-fields.php:142
+msgid "Standard Menu"
+msgstr ""
+
+#: ../lib/menus/menu-item-custom-fields.php:143
+msgid "Mega Menu"
+msgstr ""
+
+#: ../lib/menus/menu-item-custom-fields.php:145
+msgid "Content Menu"
+msgstr ""
+
+#: ../lib/menus/menu-item-custom-fields.php:146
+msgid "Tab Content Menu"
+msgstr ""
+
+#: ../lib/menus/menu-item-custom-fields.php:148
+msgid "Login Link"
+msgstr ""
+
+#: ../lib/menus/menu-item-custom-fields.php:149
+msgid "Register Link"
+msgstr ""
+
+#: ../lib/menus/menu-item-custom-fields.php:150
+msgid "Logout Link"
+msgstr ""
+
+#: ../lib/menus/menu-item-custom-fields.php:151
+msgid "Profile Link"
+msgstr ""
+
+#: ../lib/menus/menu-item-custom-fields.php:161
+msgid "Set the number of columns when using the mega menu option only."
+msgstr ""
+
+#: ../lib/menus/menu-item-custom-fields.php:170
+msgid "Show on all devices"
+msgstr ""
+
+#: ../lib/menus/menu-item-custom-fields.php:171
+msgid "Only show on larger devices"
+msgstr ""
+
+#: ../lib/menus/menu-item-custom-fields.php:172
+msgid "Only show on smaller devices"
+msgstr ""
+
+#: ../lib/menus/menu-item-custom-fields.php:174
+msgid "Choose what devices to show this link on."
+msgstr ""
+
+#: ../lib/menus/menu-item-custom-fields.php:182
+msgid "Show for all users"
+msgstr ""
+
+#: ../lib/menus/menu-item-custom-fields.php:183
+msgid "Show for logged in users only"
+msgstr ""
+
+#: ../lib/menus/menu-item-custom-fields.php:184
+msgid "Show for logged out users only"
+msgstr ""
+
+#: ../lib/menus/menu-item-custom-fields.php:186
+msgid "Choose what users see this link."
+msgstr ""
+
+#: ../lib/menus/menu-item-custom-fields.php:193
+msgid ""
+"Hide the navigation label (for example if you only want to show the icon)."
+msgstr ""
+
+#: ../lib/menus/menu-item-custom-fields.php:201
+msgid "Menu Link"
+msgstr ""
+
+#: ../lib/menus/menu-item-custom-fields.php:202
+msgid "Menu Text"
+msgstr ""
+
+#: ../lib/menus/menu-item-custom-fields.php:203
+msgid "Menu Image"
+msgstr ""
+
+#: ../lib/menus/menu-item-custom-fields.php:205
+msgid ""
+"Choose to replace the menu link with text or an image. Add your text to "
+"\"Navigation Label\" text field or image URL to the \"URL\" text field."
+msgstr ""
+
+#: ../lib/sections/entry-meta.php:14
+msgid "By"
+msgstr ""
+
+#: ../lib/sections/entry-meta.php:18
+msgid "on"
+msgstr ""
+
+#: ../lib/sections/entry-meta.php:27 ../lib/sections/loop-meta.php:9
+msgid "Comments Closed"
+msgstr ""
+
+#: ../lib/sections/entry-meta.php:33 ../lib/sections/loop-meta.php:11
+#: ../lib/widgets/recent-posts.php:84
+msgid "views"
+msgstr ""
+
+#: ../lib/sections/filter.php:42
+msgid "Newest"
+msgstr ""
+
+#: ../lib/sections/filter.php:43
+msgid "Oldest"
+msgstr ""
+
+#: ../lib/sections/filter.php:47
+msgid "Title (A-Z)"
+msgstr ""
+
+#: ../lib/sections/filter.php:48
+msgid "Title (Z-A)"
+msgstr ""
+
+#: ../lib/sections/filter.php:52
+msgid "Most Comments"
+msgstr ""
+
+#: ../lib/sections/filter.php:56
+msgid "Most Views"
+msgstr ""
+
+#: ../lib/sections/filter.php:69
+msgid "Posted any date"
+msgstr ""
+
+#: ../lib/sections/filter.php:70
+msgid "Posted in the last year"
+msgstr ""
+
+#: ../lib/sections/filter.php:71
+msgid "Posted in the last month"
+msgstr ""
+
+#: ../lib/sections/filter.php:72
+msgid "Posted in the last week"
+msgstr ""
+
+#: ../lib/sections/filter.php:73
+msgid "Posted in the last day"
+msgstr ""
+
+#: ../lib/sections/filter.php:83
+msgid "Updated any date"
+msgstr ""
+
+#: ../lib/sections/filter.php:84
+msgid "Updated in the last year"
+msgstr ""
+
+#: ../lib/sections/filter.php:85
+msgid "Updated in the last month"
+msgstr ""
+
+#: ../lib/sections/filter.php:86
+msgid "Updated in the last week"
+msgstr ""
+
+#: ../lib/sections/filter.php:87
+msgid "Updated in the last day"
+msgstr ""
+
+#: ../lib/sections/login-form.php:9
+msgid "Login"
+msgstr ""
+
+#: ../lib/sections/login-form.php:10
+msgid "Lost Password"
+msgstr ""
+
+#: ../lib/sections/login-form.php:11
+msgid "Register"
+msgstr ""
+
+#: ../lib/sections/related-items.php:67
+msgid "Related Articles"
+msgstr ""
+
+#: ../lib/sections/share-icons.php:3
+msgid "Share This Post"
+msgstr ""
+
+#: ../lib/sections/share-icons.php:7
+msgid "Tweet This Post"
+msgstr ""
+
+#: ../lib/sections/share-icons.php:9
+msgid "Share on Facebook"
+msgstr ""
+
+#: ../lib/sections/share-icons.php:11
+msgid "Share on Google+"
+msgstr ""
+
+#: ../lib/widgets/categories.php:13
+msgid "A list or dropdown of categories."
+msgstr ""
+
+#: ../lib/widgets/categories.php:14
+msgid "GP Categories"
+msgstr ""
+
+#: ../lib/widgets/categories.php:23
+msgid "Categories"
+msgstr ""
+
+#: ../lib/widgets/categories.php:54
+msgid "Select Category"
+msgstr ""
+
+#: ../lib/widgets/categories.php:112 ../lib/widgets/recent-comments.php:97
+#: ../lib/widgets/recent-posts.php:127
+msgid "Title:"
+msgstr ""
+
+#: ../lib/widgets/categories.php:116
+msgid "Show as dropdown"
+msgstr ""
+
+#: ../lib/widgets/categories.php:119
+msgid "Show post counts"
+msgstr ""
+
+#: ../lib/widgets/categories.php:122
+msgid "Show hierarchy"
+msgstr ""
+
+#: ../lib/widgets/categories.php:124
+msgid "Exclude:"
+msgstr ""
+
+#: ../lib/widgets/categories.php:126
+msgid ""
+"Enter the ID numbers of the categories you want to exclude, separating each "
+"with a comma (e.g. 48,142)."
+msgstr ""
+
+#: ../lib/widgets/recent-comments.php:13
+msgid "Your site's most recent comments with avatars."
+msgstr ""
+
+#: ../lib/widgets/recent-comments.php:14
+msgid "GP Recent Comments"
+msgstr ""
+
+#: ../lib/widgets/recent-comments.php:20
+msgid "Recent Comments"
+msgstr ""
+
+#: ../lib/widgets/recent-comments.php:60
+msgid "said"
+msgstr ""
+
+#: ../lib/widgets/recent-comments.php:62
+msgid "ago"
+msgstr ""
+
+#: ../lib/widgets/recent-comments.php:74
+msgid "There are no comments to display."
+msgstr ""
+
+#: ../lib/widgets/recent-comments.php:102
+msgid "Number of comments to show:"
+msgstr ""
+
+#: ../lib/widgets/recent-posts.php:13
+msgid "Your site's most recent posts with thumbnails."
+msgstr ""
+
+#: ../lib/widgets/recent-posts.php:14
+msgid "GP Recent Posts"
+msgstr ""
+
+#: ../lib/widgets/recent-posts.php:21
+msgid "Recent Posts"
+msgstr ""
+
+#: ../lib/widgets/recent-posts.php:132
+msgid "Number of posts to show:"
+msgstr ""
+
+#: ../lib/widgets/recent-posts.php:136
+msgid "Display post date?"
+msgstr ""
+
+#: ../lib/widgets/recent-posts.php:140
+msgid "Display post views?"
+msgstr ""
+
+#: ../search.php:25
+msgid "search results for"
+msgstr ""
+
+#: ../search.php:27
+msgid "Search"
+msgstr ""
+
+#: ../search.php:36
+msgid "If you didn't find what you were looking for try searching again."
+msgstr ""
+
+#: ../search.php:40
+msgid "You left the search box empty, please enter a valid term."
+msgstr ""
+
+#: ../searchform.php:2
+msgid "search"
+msgstr ""
+
+#, fuzzy
+#~ msgid "Large Background"
+#~ msgstr "Test"
+
+#, fuzzy
+#~ msgid "New Sidebar"
+#~ msgstr "Test"
+
+#, fuzzy
+#~ msgid "Create Sidebar"
+#~ msgstr "Test"
+
+#, fuzzy
+#~ msgid "Custom Sidebars"
+#~ msgstr "Test"
+
+#, fuzzy
+#~ msgid "Reset Sidebars"
+#~ msgstr "Test"
+
+#, fuzzy
+#~ msgid "Hub Category"
+#~ msgstr "Test"
+
+#, fuzzy
+#~ msgid "All Hub Categories"
+#~ msgstr "Test"
+
+#, fuzzy
+#~ msgid "Add New Hub Category"
+#~ msgstr "Test"
+
+#, fuzzy
+#~ msgid "Edit Hub Category"
+#~ msgstr "Test"
+
+#, fuzzy
+#~ msgid "New Hub Category"
+#~ msgstr "Test"
+
+#, fuzzy
+#~ msgid "View Hub Category"
+#~ msgstr "Test"
+
+#, fuzzy
+#~ msgid "Search Hub Categories"
+#~ msgstr "Test"
+
+#, fuzzy
+#~ msgid "Portfolio Items"
+#~ msgstr "Test"
+
+#, fuzzy
+#~ msgid "Portfolio Item"
+#~ msgstr "Test"
+
+#, fuzzy
+#~ msgid "All Portfolio Items"
+#~ msgstr "Test"
+
+#, fuzzy
+#~ msgid "Add New Portfolio Item"
+#~ msgstr "Test"
+
+#, fuzzy
+#~ msgid "Edit Portfolio Item"
+#~ msgstr "Test"
+
+#, fuzzy
+#~ msgid "New Portfolio Item"
+#~ msgstr "Test"
+
+#, fuzzy
+#~ msgid "View Portfolio Item"
+#~ msgstr "Test"
+
+#, fuzzy
+#~ msgid "Search Portfolio Items"
+#~ msgstr "Test"
+
+#, fuzzy
+#~ msgid "No portfolio items found"
+#~ msgstr "Test"
+
+#, fuzzy
+#~ msgid "No portfolio items found in Trash"
+#~ msgstr "Test"
+
+#, fuzzy
+#~ msgid "Portfolio Category"
+#~ msgstr "Test"
+
+#, fuzzy
+#~ msgid "All Portfolio Categories"
+#~ msgstr "Test"
+
+#, fuzzy
+#~ msgid "Add New Portfolio Category"
+#~ msgstr "Test"
+
+#, fuzzy
+#~ msgid "Edit Portfolio Category"
+#~ msgstr "Test"
+
+#, fuzzy
+#~ msgid "New Portfolio Category"
+#~ msgstr "Test"
+
+#, fuzzy
+#~ msgid "View Portfolio Category"
+#~ msgstr "Test"
+
+#, fuzzy
+#~ msgid "Search Portfolio Categories"
+#~ msgstr "Test"
+
+#, fuzzy
+#~ msgid "Add New Slide"
+#~ msgstr "Test"
+
+#, fuzzy
+#~ msgid "No slides found"
+#~ msgstr "Test"
+
+#, fuzzy
+#~ msgid "No slides found in Trash"
+#~ msgstr "Test"
+
+#, fuzzy
+#~ msgid "Slide Categories"
+#~ msgstr "Test"
+
+#, fuzzy
+#~ msgid "All Slide Categories"
+#~ msgstr "Test"
+
+#, fuzzy
+#~ msgid "Add New Slide Category"
+#~ msgstr "Test"
+
+#, fuzzy
+#~ msgid "Edit Slide Category"
+#~ msgstr "Test"
+
+#, fuzzy
+#~ msgid "New Slide Category"
+#~ msgstr "Test"
+
+#, fuzzy
+#~ msgid "View Slide Category"
+#~ msgstr "Test"
+
+#, fuzzy
+#~ msgid "Search Slide Categories"
+#~ msgstr "Test"
+
+#, fuzzy
+#~ msgid "No user reviews found"
+#~ msgstr "Test"
+
+#, fuzzy
+#~ msgid "No user reviews found in Trash"
+#~ msgstr "Test"
+
+#, fuzzy
+#~ msgid "Video Category"
+#~ msgstr "Test"
+
+#, fuzzy
+#~ msgid "All Video Categories"
+#~ msgstr "Test"
+
+#, fuzzy
+#~ msgid "Add New Video Category"
+#~ msgstr "Test"
+
+#, fuzzy
+#~ msgid "Edit Video Category"
+#~ msgstr "Test"
+
+#, fuzzy
+#~ msgid "New Video Category"
+#~ msgstr "Test"
+
+#, fuzzy
+#~ msgid "View Video Category"
+#~ msgstr "Test"
+
+#, fuzzy
+#~ msgid "Search Video Categories"
+#~ msgstr "Test"
+
+#, fuzzy
+#~ msgid "Page Title Settings"
+#~ msgstr "Test"
+
+#, fuzzy
+#~ msgid "Page Title Height"
+#~ msgstr "Test"
