@@ -17,17 +17,17 @@ if ( ! function_exists( 'ghostpool_theme_setup' ) ) {
 		load_theme_textdomain( 'socialize', trailingslashit( WP_LANG_DIR ) . 'themes/' );
 		load_theme_textdomain( 'socialize', get_stylesheet_directory() . '/languages' );
 		load_theme_textdomain( 'socialize', get_template_directory() . '/languages' );
-			
-		// If theme plugin is not activated	
+
+		// If theme plugin is not activated
 		if ( ! function_exists( 'ghostpool_option' ) && ! function_exists( 'redux_post_meta' ) ) {
 			function ghostpool_option( $gp_opt_1, $gp_opt_2 = false, $gp_opt_3 = false ) {
 				if ( $gp_opt_3 != false ) {
 					return $gp_opt_3;
-				}	
+				}
 			}
 			function redux_post_meta() {}
 		}
-				
+
 		// Featured images
 		add_theme_support( 'post-thumbnails' );
 		set_post_thumbnail_size( 150, 150, true );
@@ -49,7 +49,7 @@ if ( ! function_exists( 'ghostpool_theme_setup' ) ) {
 
 		// Title support
 		add_theme_support( 'title-tag' );
-		
+
 		// Register navigation menus
 		register_nav_menus( array(
 			'gp-primary-main-header-nav' => esc_html__( 'Primary Main Header Navigation', 'socialize' ),
@@ -88,7 +88,7 @@ if ( ! function_exists( 'ghostpool_theme_setup' ) ) {
 
 		// Theme updates
 		require_once( get_template_directory() . '/lib/inc/github.php' );
-		
+
 		// BuddyPress functions
 		if ( function_exists( 'bp_is_active' ) ) {
 			require_once( get_template_directory() . '/lib/inc/bp-functions.php' );
@@ -114,20 +114,20 @@ if ( ! function_exists( 'ghostpool_theme_setup' ) ) {
 					class WPBakeryShortCode_Team extends WPBakeryShortCodesContainer {}
 				}
 				if ( class_exists( 'WPBakeryShortCode' ) ) {
-					class WPBakeryShortCode_Pricing_Column extends WPBakeryShortCode {}	
+					class WPBakeryShortCode_Pricing_Column extends WPBakeryShortCode {}
 					class WPBakeryShortCode_Testimonial extends WPBakeryShortCode {}
-					class WPBakeryShortCode_Team_Member extends WPBakeryShortCode {}	
+					class WPBakeryShortCode_Team_Member extends WPBakeryShortCode {}
 				}
 			}
 			add_action( 'init', 'ghostpool_vc_shortcodes_container' );
 		}
-		
+
 		// Load ajax
 		require_once( get_template_directory() . '/lib/inc/ajax.php' );
-		
+
 		// Login settings
 		include_once( get_template_directory() . '/lib/inc/login-settings.php' );
-		
+
 	}
 }
 add_action( 'after_setup_theme', 'ghostpool_theme_setup' );
@@ -148,34 +148,34 @@ add_action( 'after_setup_theme', 'ghostpool_content_width', 0 );
 /**
  * Enqueues scripts and styles.
  *
- */	
+ */
 if ( ! function_exists( 'ghostpool_scripts' ) ) {
 
 	function ghostpool_scripts() {
-		
+
 		wp_enqueue_style( 'ghostpool-style', get_stylesheet_uri() );
-		
+
 		wp_enqueue_style( 'fontawesome', get_template_directory_uri() . '/lib/fonts/font-awesome/css/font-awesome.min.css' );
 
 		if ( ghostpool_option( 'lightbox' ) != 'disabled' ) {
 			wp_enqueue_style( 'prettyphoto', get_template_directory_uri() . '/lib/scripts/prettyPhoto/css/prettyPhoto.css' );
 		}
-					
+
 		if ( ghostpool_option( 'custom_stylesheet' ) ) {
 			wp_enqueue_style( 'ghostpool-custom-style', get_template_directory_uri() . '/' . ghostpool_option( 'custom_stylesheet' ) );
 		}
-		
+
 		$gp_custom_css = '';
 
 		$gp_custom_css .= '<!--[if gte IE 9]>.gp-slider-wrapper .gp-slide-caption + .gp-post-thumbnail:before,body:not(.gp-full-page-page-header) .gp-page-header.gp-has-text:before,body:not(.gp-full-page-page-header) .gp-page-header.gp-has-teaser-video.gp-has-text .gp-video-header:before{filter: none;}<![endif]-->' .
 
-		'#gp-main-header {height:' . ghostpool_option( 'desktop_header_height', 'height' ) . 'px;}' . 
+		'#gp-main-header {height:' . ghostpool_option( 'desktop_header_height', 'height' ) . 'px;}' .
 
 		'.gp-scrolling #gp-main-header {height:' . ghostpool_option( 'desktop_scrolling_header_height', 'height' ) . 'px;}' .
 
-		'.gp-header-standard #gp-logo {padding:' . ( ghostpool_option( 'desktop_header_height', 'height' ) - ghostpool_option( 'desktop_logo_dimensions', 'height' ) ) / 2 . 'px 0;}' . 
+		'.gp-header-standard #gp-logo {padding:' . ( ghostpool_option( 'desktop_header_height', 'height' ) - ghostpool_option( 'desktop_logo_dimensions', 'height' ) ) / 2 . 'px 0;}' .
 
-		'.gp-scrolling.gp-header-standard #gp-logo {padding:' . ( ghostpool_option( 'desktop_scrolling_header_height', 'height' ) - ghostpool_option( 'desktop_logo_dimensions', 'height' ) ) / 2 . 'px 0;}' . 
+		'.gp-scrolling.gp-header-standard #gp-logo {padding:' . ( ghostpool_option( 'desktop_scrolling_header_height', 'height' ) - ghostpool_option( 'desktop_logo_dimensions', 'height' ) ) / 2 . 'px 0;}' .
 
 		'.gp-header-standard #gp-primary-main-nav .menu > li > a{padding:' . ( ghostpool_option( 'desktop_header_height', 'height' ) - ( ghostpool_option( 'primary_nav_typography', 'line-height' ) + ghostpool_option( 'primary_nav_link_border_hover', 'border-top' ) ) ) / 2 . 'px 0;}
 		.gp-header-standard #gp-cart-button,.gp-header-standard #gp-search-button,.gp-header-standard #gp-profile-button{padding:' . ( ghostpool_option( 'desktop_header_height', 'height' ) - 18 ) / 2 . 'px 0;}' .
@@ -201,36 +201,36 @@ if ( ! function_exists( 'ghostpool_scripts' ) ) {
 
 		'.gp-theme .widget.buddypress div.item-options a.selected:hover{color: ' . ghostpool_option( 'widget_title_link', 'regular' ) . '!important;}' .
 
-		'.gp-theme #buddypress .activity-list .activity-content blockquote a{color: ' . ghostpool_option( 'general_link', 'regular' ) . '}' . 
+		'.gp-theme #buddypress .activity-list .activity-content blockquote a{color: ' . ghostpool_option( 'general_link', 'regular' ) . '}' .
 
-		'.gp-theme #buddypress .activity-list .activity-content blockquote a:hover{color: ' . ghostpool_option( 'general_link', 'hover' ) . '}' . 
+		'.gp-theme #buddypress .activity-list .activity-content blockquote a:hover{color: ' . ghostpool_option( 'general_link', 'hover' ) . '}' .
 
 		'@media only screen and (max-width: 1082px) {' .
 
-			'.gp-header-standard #gp-primary-main-nav .menu > li > a {padding:' . ( ghostpool_option( 'desktop_header_height', 'height' ) - ( 16 + ghostpool_option( 'primary_nav_link_border_hover', 'border-top' ) ) ) / 2 . 'px 0;}' . 
+			'.gp-header-standard #gp-primary-main-nav .menu > li > a {padding:' . ( ghostpool_option( 'desktop_header_height', 'height' ) - ( 16 + ghostpool_option( 'primary_nav_link_border_hover', 'border-top' ) ) ) / 2 . 'px 0;}' .
 
-			'.gp-scrolling.gp-header-standard #gp-primary-main-nav .menu > li > a {padding:' . ( ghostpool_option( 'desktop_scrolling_header_height', 'height' ) - ( 16 + ghostpool_option( 'primary_nav_link_border_hover', 'border-top' ) ) ) / 2 . 'px 0;}' . 
-		
+			'.gp-scrolling.gp-header-standard #gp-primary-main-nav .menu > li > a {padding:' . ( ghostpool_option( 'desktop_scrolling_header_height', 'height' ) - ( 16 + ghostpool_option( 'primary_nav_link_border_hover', 'border-top' ) ) ) / 2 . 'px 0;}' .
+
 			'.gp-header-standard #gp-cart-button,.gp-header-standard #gp-search-button,.gp-header-standard #gp-profile-button{padding:' . ( ghostpool_option( 'desktop_header_height', 'height' ) - 18 ) / 2 . 'px 0;}' .
 
 			'.gp-scrolling.gp-header-standard #gp-cart-button,.gp-scrolling.gp-header-standard #gp-search-button,.gp-scrolling.gp-header-standard #gp-profile-button{padding:' . ( ghostpool_option( 'desktop_scrolling_header_height', 'height' ) - 18 ) / 2 . 'px 0;}' .
-		
+
 			'.gp-header-standard #gp-secondary-main-nav .menu > li > a{padding:' . ( ghostpool_option( 'desktop_header_height', 'height' ) - ( 14 + ghostpool_option( 'secondary_nav_link_border_hover', 'border-top' ) ) ) / 2 . 'px 0;}' .
 
 			'.gp-scrolling.gp-header-standard #gp-secondary-main-nav .menu > li > a{padding:' . ( ghostpool_option( 'desktop_scrolling_header_height', 'height' ) - ( 14 + ghostpool_option( 'secondary_nav_link_border_hover', 'border-top' ) ) ) / 2 . 'px 0;}' .
-		
+
 		'}' .
 
 		'@media only screen and (max-width: 1023px) {' .
-	
+
 			'.gp-responsive #gp-main-header {height:' . ghostpool_option( 'mobile_header_height', 'height' ) . 'px;}' .
-	
+
 			'.gp-responsive #gp-logo {padding:' . ( ghostpool_option( 'mobile_header_height', 'height' ) - ghostpool_option( 'mobile_logo_dimensions', 'height' ) ) / 2 . 'px 0;}' .
-	
+
 			'.gp-responsive #gp-mobile-nav-button,.gp-responsive #gp-cart-button,.gp-responsive #gp-search-button,.gp-responsive #gp-profile-button{padding:' . ( ghostpool_option( 'mobile_header_height', 'height' ) - 18 ) / 2 . 'px 0;}' .
-	
+
 		'}';
-	
+
 		if ( ghostpool_option( 'custom_css' ) ) {
 			$gp_custom_css .= ghostpool_option( 'custom_css' );
 		}
@@ -238,31 +238,31 @@ if ( ! function_exists( 'ghostpool_scripts' ) ) {
 		wp_add_inline_style( 'ghostpool-style', $gp_custom_css );
 
 		wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/lib/scripts/modernizr.js', false, '', true );
-				
-		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) { 
+
+		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
 		}
-		
-		if ( ghostpool_option( 'smooth_scrolling' ) == 'gp-smooth-scrolling' ) { 
+
+		if ( ghostpool_option( 'smooth_scrolling' ) == 'gp-smooth-scrolling' ) {
 			wp_enqueue_script( 'nicescroll', get_template_directory_uri() . '/lib/scripts/nicescroll.min.js', false, '', true );
 		}
-		
+
 		wp_enqueue_script( 'selectivizr', get_template_directory_uri() . '/lib/scripts/selectivizr.min.js', false, '', true );
 
 		wp_enqueue_script( 'placeholder', get_template_directory_uri() . '/lib/scripts/placeholders.min.js', false, '', true );
-		
-		if ( ghostpool_option( 'lightbox' ) != 'disabled' ) {				
+
+		if ( ghostpool_option( 'lightbox' ) != 'disabled' ) {
 			wp_enqueue_script( 'prettyphoto', get_template_directory_uri() . '/lib/scripts/prettyPhoto/js/jquery.prettyPhoto.js', array( 'jquery' ), '', true );
 		}
-		
-		if ( ghostpool_option( 'back_to_top' ) != 'gp-no-back-to-top' ) { 
+
+		if ( ghostpool_option( 'back_to_top' ) != 'gp-no-back-to-top' ) {
 			wp_enqueue_script( 'jquery-totop', get_template_directory_uri() . '/lib/scripts/jquery.ui.totop.min.js', array( 'jquery' ), '', true );
-		}		
+		}
 
 		wp_enqueue_script( 'jquery-flexslider', get_template_directory_uri() . '/lib/scripts/jquery.flexslider-min.js', array( 'jquery' ), '', true );
-		
+
 		wp_enqueue_script( 'isotope', get_template_directory_uri() . '/lib/scripts/isotope.pkgd.min.js', false, '', true );
-				
+
 		wp_enqueue_script( 'imagesloaded', get_template_directory_uri() . '/lib/scripts/imagesLoaded.min.js', false, '', true );
 
 		wp_enqueue_script( 'jquery-stellar', get_template_directory_uri() . '/lib/scripts/jquery.stellar.min.js', array( 'jquery' ), '', true );
@@ -276,20 +276,20 @@ if ( ! function_exists( 'ghostpool_scripts' ) ) {
 		} else {
 			$gp_items_in_view = '';
 		}
-																											
+
 		wp_enqueue_script( 'ghostpool-custom-js', get_template_directory_uri() . '/lib/scripts/custom.js', array( 'jquery' ), '', true );
-		
+
 		wp_localize_script( 'ghostpool-custom-js', 'ghostpool_script', array(
 			'lightbox' => ghostpool_option( 'lightbox' ),
 			'related_items_in_view' => $gp_items_in_view
-		) );		
-			
+		) );
+
 		// Add custom JavaScript code
 		if ( ghostpool_option( 'js_code' ) ) {
 			$gp_js_code = str_replace( array( '<script>', '</script>' ), '', ghostpool_option( 'js_code' ) );
 			 wp_add_inline_script( 'ghostpool-custom-js', $gp_js_code );
 		}
-								
+
 	}
 }
 add_action( 'wp_enqueue_scripts', 'ghostpool_scripts' );
@@ -297,25 +297,25 @@ add_action( 'wp_enqueue_scripts', 'ghostpool_scripts' );
 /**
  * Enqueues admin scripts and styles.
  *
- */	
+ */
 if ( ! function_exists( 'ghostpool_enqueue_admin_styles' ) ) {
 	function ghostpool_admin_scripts() {
-	
-		wp_enqueue_style( 'ghostpool-admin ', get_template_directory_uri() . '/lib/css/admin.css' );		
-		
+
+		wp_enqueue_style( 'ghostpool-admin ', get_template_directory_uri() . '/lib/css/admin.css' );
+
 		wp_enqueue_script( 'ghostpool-admin', get_template_directory_uri() . '/lib/scripts/admin.js', '', '', true );
-		
+
 	}
 }
-add_action( 'admin_enqueue_scripts', 'ghostpool_admin_scripts' );	
+add_action( 'admin_enqueue_scripts', 'ghostpool_admin_scripts' );
 
 /**
  * Adds custom classes to the array of body classes.
  *
- */	
+ */
 if ( !function_exists( 'ghostpool_body_classes' ) ) {
 	function ghostpool_body_classes( $gp_classes ) {
-		global $post;	
+		global $post;
 		$gp_classes[] = 'gp-theme';
 		$gp_classes[] = 'gp-responsive';
 		$gp_classes[] = ghostpool_option( 'theme_layout' );
@@ -329,13 +329,13 @@ if ( !function_exists( 'ghostpool_body_classes' ) ) {
 		$gp_classes[] = ghostpool_option( 'profile_button' );
 		$gp_classes[] = ghostpool_option( 'small_header' );
 		$gp_classes[] = $GLOBALS['ghostpool_page_header'];
-		$gp_classes[] = $GLOBALS['ghostpool_layout'];			
+		$gp_classes[] = $GLOBALS['ghostpool_layout'];
 		if ( is_page_template( 'homepage-template.php' ) ) {
 			$gp_classes[] = 'gp-homepage';
 		}
-		if ( defined( 'TSS_VERSION' ) ) {	
-			$gp_classes[] = 'gp-sticky-sidebars';	
-		}			
+		if ( defined( 'TSS_VERSION' ) ) {
+			$gp_classes[] = 'gp-sticky-sidebars';
+		}
 		return $gp_classes;
 	}
 }
@@ -344,11 +344,11 @@ add_filter( 'body_class', 'ghostpool_body_classes' );
 /**
  * Content added to header
  *
- */	
+ */
 if ( ! function_exists( 'ghostpool_wp_header' ) ) {
 
 	function ghostpool_wp_header() {
-	
+
 		// Title fallback for versions earlier than WordPress 4.1
 		if ( ! function_exists( '_wp_render_title_tag' ) && ! function_exists( 'ghostpool_render_title' ) ) {
 			function ghostpool_render_title() { ?>
@@ -357,8 +357,8 @@ if ( ! function_exists( 'ghostpool_wp_header' ) ) {
 		}
 
 		// Initial variables - variables loaded only once at the top of the page
-		ghostpool_init_variables();	
-		
+		ghostpool_init_variables();
+
 	}
 }
 add_action( 'wp_head', 'ghostpool_wp_header' );
@@ -366,7 +366,7 @@ add_action( 'wp_head', 'ghostpool_wp_header' );
 /**
  * Navigation user meta
  *
- */	
+ */
 if ( ! function_exists( 'ghostpool_nav_user_meta' ) ) {
 	function ghostpool_nav_user_meta( $gp_user_id = NULL ) {
 
@@ -376,9 +376,9 @@ if ( ! function_exists( 'ghostpool_nav_user_meta' ) ) {
 
 		// So this can be used without hooking into user_register
 		if ( ! $gp_user_id ) {
-			$gp_user_id = get_current_user_id(); 
+			$gp_user_id = get_current_user_id();
 		}
-	
+
 		// Set the default hiddens if it has not been set yet
 		if ( ! get_user_meta( $gp_user_id, $GLOBALS['ghostpool_meta_key']['menus'], true ) ) {
 			$gp_meta_value = array( 'add-gp_slides', 'add-gp_slide' );
@@ -390,8 +390,8 @@ if ( ! function_exists( 'ghostpool_nav_user_meta' ) ) {
 			$gp_meta_value = array( 'link-target', 'xfn', 'description' );
 			update_user_meta( $gp_user_id, $GLOBALS['ghostpool_meta_key']['properties'], $gp_meta_value );
 		}
-	
-	}	
+
+	}
 }
 add_action( 'admin_init', 'ghostpool_nav_user_meta' );
 
@@ -401,13 +401,13 @@ add_action( 'admin_init', 'ghostpool_nav_user_meta' );
  */
 if ( ! function_exists( 'ghostpool_meta_data' ) ) {
 	function ghostpool_meta_data( $gp_post_id ) {
-	
+
 		global $post;
-		
+
 		$gp_global = get_option( 'socialize' );
 
 		// Get title
-		if ( ! empty( $GLOBALS['ghostpool_custom_title'] ) ) { 
+		if ( ! empty( $GLOBALS['ghostpool_custom_title'] ) ) {
 			$gp_title = esc_attr( $GLOBALS['ghostpool_custom_title'] );
 		} else {
 			$gp_title = get_the_title( $gp_post_id );
@@ -415,13 +415,13 @@ if ( ! function_exists( 'ghostpool_meta_data' ) ) {
 
 		// Meta data
 		return '<meta itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" content="' . esc_url( get_permalink( $gp_post_id ) ) . '">
-		<meta itemprop="headline" content="' . esc_attr( $gp_title ) . '">			
+		<meta itemprop="headline" content="' . esc_attr( $gp_title ) . '">
 		<div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
 			<meta itemprop="url" content="' . esc_url( wp_get_attachment_url( get_post_thumbnail_id( $gp_post_id ) ) ) . '">
-			<meta itemprop="width" content="' .  absint( $GLOBALS['ghostpool_image_width'] ) . '">	
-			<meta itemprop="height" content="' . absint( $GLOBALS['ghostpool_image_height'] ) . '">		
+			<meta itemprop="width" content="' .  absint( $GLOBALS['ghostpool_image_width'] ) . '">
+			<meta itemprop="height" content="' . absint( $GLOBALS['ghostpool_image_height'] ) . '">
 		</div>
-		<meta itemprop="author" content="' . get_the_author_meta( 'display_name', $post->post_author ) . '">			
+		<meta itemprop="author" content="' . get_the_author_meta( 'display_name', $post->post_author ) . '">
 		<meta itemprop="datePublished" content="' . get_the_time( 'Y-m-d' ) . '">
 		<meta itemprop="dateModified" content="' . get_the_modified_date( 'Y-m-d' ) . '">
 		<div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
@@ -443,7 +443,7 @@ if ( ! function_exists( 'ghostpool_meta_data' ) ) {
 if ( ! function_exists( 'ghostpool_breadcrumbs' ) ) {
 	function ghostpool_breadcrumbs() {
 
-		if ( function_exists( 'yoast_breadcrumb' ) && ! is_front_page() ) { 
+		if ( function_exists( 'yoast_breadcrumb' ) && ! is_front_page() ) {
 			$gp_breadcrumbs = yoast_breadcrumb( '<div id="gp-breadcrumbs">', '</div>' );
 		} else {
 			$gp_breadcrumbs = '';
@@ -458,10 +458,10 @@ if ( ! function_exists( 'ghostpool_breadcrumbs' ) ) {
  * @link https://developer.wordpress.org/reference/functions/register_sidebar/
  *
  */
- 
+
 // Categories Widget
 require_once( get_template_directory() . '/lib/widgets/categories.php' );
-	
+
 // Recent Comments Widget
 require_once( get_template_directory() . '/lib/widgets/recent-comments.php' );
 
@@ -472,7 +472,7 @@ if ( ! function_exists( 'ghostpool_widgets_init' ) ) {
 	function ghostpool_widgets_init() {
 
 		// Sidebars
-		register_sidebar( array( 
+		register_sidebar( array(
 			'name'          => esc_html__( 'Left Sidebar', 'socialize' ),
 			'id'            => 'gp-left-sidebar',
 			'description'   => esc_html__( 'Displayed on posts, pages and post categories.', 'socialize' ),
@@ -482,7 +482,7 @@ if ( ! function_exists( 'ghostpool_widgets_init' ) ) {
 			'after_title'   => '</h3>',
 		) );
 
-		register_sidebar( array( 
+		register_sidebar( array(
 			'name'          => esc_html__( 'Right Sidebar', 'socialize' ),
 			'id'            => 'gp-right-sidebar',
 			'description'   => esc_html__( 'Displayed on posts, pages and post categories.', 'socialize' ),
@@ -492,7 +492,7 @@ if ( ! function_exists( 'ghostpool_widgets_init' ) ) {
 			'after_title'   => '</h3>',
 		) );
 
-		register_sidebar( array( 
+		register_sidebar( array(
 			'name'          => esc_html__( 'Homepage Left Sidebar', 'socialize' ),
 			'id'            => 'gp-homepage-left-sidebar',
 			'description'   => esc_html__( 'Displayed on the homepage.', 'socialize' ),
@@ -502,7 +502,7 @@ if ( ! function_exists( 'ghostpool_widgets_init' ) ) {
 			'after_title'   => '</h3>',
 		) );
 
-		register_sidebar( array( 
+		register_sidebar( array(
 			'name'          => esc_html__( 'Homepage Right Sidebar', 'socialize' ),
 			'id'            => 'gp-homepage-right-sidebar',
 			'description'   => esc_html__( 'Displayed on the homepage.', 'socialize' ),
@@ -511,7 +511,7 @@ if ( ! function_exists( 'ghostpool_widgets_init' ) ) {
 			'before_title'  => '<h3 class="widgettitle">',
 			'after_title'   => '</h3>',
 		) );
-				
+
 		register_sidebar( array(
 			'name'          => esc_html__( 'Footer 1', 'socialize' ),
 			'id'            => 'gp-footer-1',
@@ -520,7 +520,7 @@ if ( ! function_exists( 'ghostpool_widgets_init' ) ) {
 			'after_widget'  => '</div>',
 			'before_title'  => '<h3 class="widgettitle">',
 			'after_title'   => '</h3>',
-		) );        
+		) );
 
 		register_sidebar( array(
 			'name'          => esc_html__( 'Footer 2', 'socialize' ),
@@ -530,8 +530,8 @@ if ( ! function_exists( 'ghostpool_widgets_init' ) ) {
 			'after_widget'  => '</div>',
 			'before_title'  => '<h3 class="widgettitle">',
 			'after_title'   => '</h3>',
-		) );        
-	
+		) );
+
 		register_sidebar( array(
 			'name'          => esc_html__( 'Footer 3', 'socialize' ),
 			'id'            => 'gp-footer-3',
@@ -540,8 +540,8 @@ if ( ! function_exists( 'ghostpool_widgets_init' ) ) {
 			'after_widget'  => '</div>',
 			'before_title'  => '<h3 class="widgettitle">',
 			'after_title'   => '</h3>',
-		) );        
-	
+		) );
+
 		register_sidebar( array(
 			'name'          => esc_html__( 'Footer 4', 'socialize' ),
 			'id'            => 'gp-footer-4',
@@ -550,7 +550,7 @@ if ( ! function_exists( 'ghostpool_widgets_init' ) ) {
 			'after_widget'  => '</div>',
 			'before_title'  => '<h3 class="widgettitle">',
 			'after_title'   => '</h3>',
-		) );      
+		) );
 
 		register_sidebar( array(
 			'name'          => esc_html__( 'Footer 5', 'socialize' ),
@@ -563,7 +563,7 @@ if ( ! function_exists( 'ghostpool_widgets_init' ) ) {
 		) );
 
 		// Deprecated since v1.1
-		register_sidebar( array( 
+		register_sidebar( array(
 			'name'          => esc_html__( 'Standard Sidebar (Deprecated)', 'socialize' ),
 			'id'            => 'gp-standard-sidebar',
 			'description'   => esc_html__( 'Displayed on posts, pages and post categories.', 'socialize' ),
@@ -572,7 +572,7 @@ if ( ! function_exists( 'ghostpool_widgets_init' ) ) {
 			'before_title'  => '<h3 class="widgettitle">',
 			'after_title'   => '</h3>',
 		) );
-			
+
 	}
 }
 add_action( 'widgets_init', 'ghostpool_widgets_init' );
@@ -587,7 +587,7 @@ if ( ! function_exists( 'ghostpool_excerpt_length' ) ) {
 			return 50;
 		} else {
 			return 10000;
-		}	
+		}
 	}
 }
 add_filter( 'excerpt_length', 'ghostpool_excerpt_length' );
@@ -595,30 +595,30 @@ add_filter( 'excerpt_length', 'ghostpool_excerpt_length' );
 /**
  * Custom excerpt format
  *
- */	
+ */
 if ( ! function_exists( 'ghostpool_excerpt' ) ) {
 	function ghostpool_excerpt( $gp_length ) {
 		if ( isset( $GLOBALS['ghostpool_read_more_link'] ) && $GLOBALS['ghostpool_read_more_link'] == 'enabled' ) {
 			$gp_more_text = '...<a href="' . esc_url( get_permalink( get_the_ID() ) ) . '" class="gp-read-more" title="' . the_title_attribute( 'echo=0' ) . '">' . esc_html__( 'Read More', 'socialize' ) . '</a>';
 		} else {
 			$gp_more_text = '...';
-		}	
-		
+		}
+
 		if ( get_post_meta( get_the_ID(), 'video_description', true ) ) {
 			$gp_excerpt = get_post_meta( get_the_ID(), 'video_description', true );
 		} else {
 			$gp_excerpt = get_the_excerpt();
 		}
-					
+
 		$gp_excerpt = strip_tags( $gp_excerpt );
-		if ( function_exists( 'mb_strlen' ) && function_exists( 'mb_substr' ) ) { 
+		if ( function_exists( 'mb_strlen' ) && function_exists( 'mb_substr' ) ) {
 			if ( mb_strlen( $gp_excerpt ) > $gp_length ) {
 				$gp_excerpt = mb_substr( $gp_excerpt, 0, $gp_length ) . $gp_more_text;
 			}
 		} else {
 			if ( strlen( $gp_excerpt ) > $gp_length ) {
 				$gp_excerpt = substr( $gp_excerpt, 0, $gp_length ) . $gp_more_text;
-			}	
+			}
 		}
 		return $gp_excerpt;
 	}
@@ -634,7 +634,7 @@ if ( ! function_exists( 'ghostpool_add_prefix_to_terms' ) ) {
 			$gp_term = get_term( $gp_term_id, $gp_taxonomy );
 			$gp_args = array( 'slug' => ghostpool_option( 'portfolio_cat_prefix_slug' ) . '-' . $gp_term->slug );
 			wp_update_term( $gp_term_id, $gp_taxonomy, $gp_args );
-		} 
+		}
 	}
 }
 add_action( 'created_term', 'ghostpool_add_prefix_to_terms', 10, 3 );
@@ -642,7 +642,7 @@ add_action( 'created_term', 'ghostpool_add_prefix_to_terms', 10, 3 );
 /**
  * Change password protect text
  *
- */	
+ */
 if ( ! function_exists( 'ghostpool_password_form' ) ) {
 	function ghostpool_password_form() {
 		global $post;
@@ -676,10 +676,10 @@ add_action( 'pre_get_posts', 'ghostpool_empty_search' );
 /**
  * Alter category queries
  *
- */	
+ */
 if ( ! function_exists( 'ghostpool_category_queries' ) ) {
-	function ghostpool_category_queries( $gp_query ) {	
-		if ( is_admin() OR ! $gp_query->is_main_query() ) { 
+	function ghostpool_category_queries( $gp_query ) {
+		if ( is_admin() OR ! $gp_query->is_main_query() ) {
 			return;
 		} else {
 			if ( is_post_type_archive( 'gp_portfolio_item' ) OR is_tax( 'gp_portfolios' ) )  {
@@ -696,7 +696,7 @@ if ( ! function_exists( 'ghostpool_category_queries' ) ) {
 				$GLOBALS['ghostpool_orderby'] = ghostpool_option( 'search_orderby' );
 				$GLOBALS['ghostpool_per_page'] = ghostpool_option( 'search_per_page' );
 				$GLOBALS['ghostpool_date_posted'] = ghostpool_option( 'search_date_posted' );
-				$GLOBALS['ghostpool_date_modified'] = ghostpool_option( 'search_date_modified' );				
+				$GLOBALS['ghostpool_date_modified'] = ghostpool_option( 'search_date_modified' );
 			} elseif ( is_home() OR is_archive() ) {
 				$GLOBALS['ghostpool_orderby'] = ghostpool_option( 'cat_orderby' );
 				$GLOBALS['ghostpool_per_page'] = ghostpool_option( 'cat_per_page' );
@@ -708,16 +708,16 @@ if ( ! function_exists( 'ghostpool_category_queries' ) ) {
 				ghostpool_category_variables();
 				$gp_query->set( 'posts_per_page', $GLOBALS['ghostpool_per_page'] );
 				if ( ! is_search() ) {
-					$gp_query->set( 'orderby', $GLOBALS['ghostpool_orderby_value'] );	
+					$gp_query->set( 'orderby', $GLOBALS['ghostpool_orderby_value'] );
 					$gp_query->set( 'order', $GLOBALS['ghostpool_order'] );
 					$gp_query->set( 'meta_key', $GLOBALS['ghostpool_meta_key'] );
 				}
 				$gp_query->set( 'date_query', array( $GLOBALS['ghostpool_date_posted_value'], $GLOBALS['ghostpool_date_modified_value'] ) );
 				return;
-			}	
+			}
 		}
 	}
-}	
+}
 add_action( 'pre_get_posts', 'ghostpool_category_queries', 1 );
 
 /**
@@ -744,7 +744,7 @@ if ( ! function_exists( 'ghostpool_pagination' ) ) {
 				'prev_text' => '',
 				'next_text' => '',
 				'end_size'  => 1,
-				'mid_size'  => 1, 
+				'mid_size'  => 1,
 			) ) . '</div>';
 		}
 	}
@@ -756,21 +756,21 @@ if ( ! function_exists( 'ghostpool_get_previous_posts_page_link' ) ) {
 		$gp_nextpage = intval( $paged ) - 1;
 		if ( $gp_nextpage < 1 ) {
 			$gp_nextpage = 1;
-		}	
+		}
 		if ( $paged > 1 ) {
 			return '<a href="#" data-pagelink="' . esc_attr( $gp_nextpage ) . '" class="prev"></a>';
 		} else {
 			return '<span class="prev gp-disabled"></span>';
 		}
 	}
-}		
+}
 
 if ( ! function_exists( 'ghostpool_get_next_posts_page_link' ) ) {
 	function ghostpool_get_next_posts_page_link( $gp_max_page = 0 ) {
 		global $paged;
 		if ( ! $paged ) {
 			$paged = 1;
-		}	
+		}
 		$gp_nextpage = intval( $paged ) + 1;
 		if ( ! $gp_max_page || $gp_max_page >= $gp_nextpage ) {
 			return '<a href="#" data-pagelink="' . esc_attr( $gp_nextpage ) . '" class="next"></a>';
@@ -781,19 +781,19 @@ if ( ! function_exists( 'ghostpool_get_next_posts_page_link' ) ) {
 }
 
 /**
- * Canonical, next and prev rel links on page templates 
+ * Canonical, next and prev rel links on page templates
  *
  */
 if ( ! function_exists( 'ghostpool_rel_prev_next' ) && function_exists( 'wpseo_auto_load' ) ) {
 	function ghostpool_rel_prev_next() {
 		if ( is_page_template( 'blog-template.php' ) OR is_page_template( 'portfolio-template.php' ) ) {
-		
+
 			global $paged;
-		
+
 			// Load page variables
 			ghostpool_loop_variables();
 			ghostpool_category_variables();
-			
+
 			if ( is_page_template( 'blog-template.php' ) ) {
 
 				$gp_args = array(
@@ -805,7 +805,7 @@ if ( ! function_exists( 'ghostpool_rel_prev_next' ) && function_exists( 'wpseo_a
 					'meta_key'            => $GLOBALS['ghostpool_meta_key'],
 					'posts_per_page'      => $GLOBALS['ghostpool_per_page'],
 					'paged'               => $GLOBALS['ghostpool_paged'],
-					'date_query'          => array( $GLOBALS['ghostpool_date_posted_value'], $GLOBALS['ghostpool_date_modified_value'] ),	
+					'date_query'          => array( $GLOBALS['ghostpool_date_posted_value'], $GLOBALS['ghostpool_date_modified_value'] ),
 				);
 
 			} else {
@@ -818,32 +818,32 @@ if ( ! function_exists( 'ghostpool_rel_prev_next' ) && function_exists( 'wpseo_a
 					'orderby'             => $GLOBALS['ghostpool_orderby_value'],
 					'order'               => $GLOBALS['ghostpool_order'],
 					'paged'               => $GLOBALS['ghostpool_paged'],
-					'date_query'          => array( $GLOBALS['ghostpool_date_posted_value'], $GLOBALS['ghostpool_date_modified_value'] ),	
+					'date_query'          => array( $GLOBALS['ghostpool_date_posted_value'], $GLOBALS['ghostpool_date_modified_value'] ),
 				);
-					
-			}	
+
+			}
 
 			// Contains query data
 			$gp_query = new wp_query( $gp_args );
-			
+
 			// Get maximum pages from query
 			$gp_max_page = $gp_query->max_num_pages;
-			
+
 			if ( ! $paged ) {
 				$paged = 1;
 			}
-		
+
 			// Prev rel link
 			$gp_prevpage = intval( $paged ) - 1;
 			if ( $gp_prevpage < 1 ) {
 				$gp_prevpage = 1;
-			}	
+			}
 			if ( $paged > 1 ) {
 				echo '<link rel="prev" href="' . get_pagenum_link( $gp_prevpage ) . '">';
 			}
-		
+
 			// Next rel link
-			$gp_nextpage = intval( $paged ) + 1;	
+			$gp_nextpage = intval( $paged ) + 1;
 			if ( ! $gp_max_page OR $gp_max_page >= $gp_nextpage ) {
 				echo '<link rel="next" href="' . get_pagenum_link( $gp_nextpage ) . '">';
 			}
@@ -852,16 +852,16 @@ if ( ! function_exists( 'ghostpool_rel_prev_next' ) && function_exists( 'wpseo_a
 			if ( ( is_page_template( 'blog-template.php' ) OR is_page_template( 'portfolio-template.php' ) ) && $paged > 1 ) {
 				echo '<meta name="robots" content="noindex,follow">';
 			}
-					
+
 		}
 	}
 	add_action( 'wp_head', 'ghostpool_rel_prev_next' );
 }
-	
-if ( ! function_exists( 'ghostpool_canonical_link' ) && function_exists( 'wpseo_auto_load' ) ) {	
+
+if ( ! function_exists( 'ghostpool_canonical_link' ) && function_exists( 'wpseo_auto_load' ) ) {
 	function ghostpool_canonical_link( $gp_canonical ) {
 		if ( is_page_template( 'blog-template.php' ) OR is_page_template( 'portfolio-template.php' ) ) {
-			global $paged;		
+			global $paged;
 			if ( ! $paged ) {
 				$paged = 1;
 			}
@@ -879,19 +879,19 @@ if ( ! function_exists( 'ghostpool_canonical_link' ) && function_exists( 'wpseo_
  */
 if ( ! function_exists( 'ghostpool_exclude_cats' ) ) {
 	function ghostpool_exclude_cats( $gp_post_id, $gp_no_link = false, $gp_loop ) {
-					
+
 		// Get categories for post
 		$gp_cats = wp_get_object_terms( $gp_post_id, 'category', array( 'fields' => 'ids' ) );
-		
+
 		// Remove categories that are excluded
-		if ( ghostpool_option( 'cat_exclude_cats' ) ) { 
+		if ( ghostpool_option( 'cat_exclude_cats' ) ) {
 			$gp_excluded_cats = array_diff( $gp_cats, ghostpool_option( 'cat_exclude_cats' ) );
 		} else {
 			$gp_excluded_cats = $gp_cats;
 		}
-		
+
 		// Construct new categories loop
-		if ( ! empty( $gp_excluded_cats ) && ! is_wp_error( $gp_excluded_cats ) ) { 		
+		if ( ! empty( $gp_excluded_cats ) && ! is_wp_error( $gp_excluded_cats ) ) {
 			$gp_cat_link = '';
 			foreach( $gp_excluded_cats as $gp_excluded_cat ) {
 				if ( has_term( $gp_excluded_cat, 'category', $gp_post_id ) ) {
@@ -909,7 +909,7 @@ if ( ! function_exists( 'ghostpool_exclude_cats' ) ) {
 			}
 			if ( $gp_loop == true ) {
 				return '<div class="gp-loop-cats">' . rtrim( $gp_cat_link, ' / ' ) . '</div>';
-			} else {			
+			} else {
 				return '<div class="gp-entry-cats">' . rtrim( $gp_cat_link, ' / ' ) . '</div>';
 			}
 		}
@@ -925,7 +925,7 @@ if ( ! function_exists( 'ghostpool_login_redirect' ) ) {
 	function ghostpool_login_redirect() {
 		global $pagenow;
 		if ( 'wp-login.php' == $pagenow && ghostpool_option( 'popup_box' ) == 'enabled' ) {
-		
+
 			if ( isset( $_GET['action'] ) && $_GET['action'] == 'register' ) {
 				wp_redirect( esc_url( home_url( '#register/' ) ) ); // Open registration modal window
 			} elseif ( isset( $_GET['action'] ) && $_GET['action'] == 'lostpassword' ) {
@@ -945,7 +945,7 @@ if ( ! function_exists( 'ghostpool_login_redirect' ) ) {
 add_action( 'init', 'ghostpool_login_redirect' );
 
 /**
- * Add reset password success message to home page 
+ * Add reset password success message to home page
  *
  */
 if ( isset( $_GET['action'] ) && $_GET['action'] == 'reset_success' ) {
@@ -956,12 +956,12 @@ if ( isset( $_GET['action'] ) && $_GET['action'] == 'reset_success' ) {
 	}
 	add_action( 'wp_footer', 'ghostpool_reset_password_success' );
 }
-	
+
 /**
  * Update plugin before showing theme
  *
  */
-if ( ! function_exists( 'ghostpool_socialize_plugin_update' ) ) {	
+if ( ! function_exists( 'ghostpool_socialize_plugin_update' ) ) {
 	function ghostpool_install_plugin_header() {
 		echo '<style>#gp-site-wrapper{display:none !important;}</style>';
 	}
@@ -989,7 +989,7 @@ add_filter( 'post_class', 'ghostpool_remove_hentry' );
  *
  */
 if ( ! function_exists( 'ghostpool_lightbox_image_link' ) ) {
-	function ghostpool_lightbox_image_link( $gp_content ) {	
+	function ghostpool_lightbox_image_link( $gp_content ) {
 		global $post;
 		if ( ghostpool_option( 'lightbox' ) != 'disabled' ) {
 			if ( ghostpool_option( 'lightbox' ) == 'group_images' ) {
@@ -1002,15 +1002,15 @@ if ( ! function_exists( 'ghostpool_lightbox_image_link' ) ) {
 			foreach ( $gp_matches as $gp_val ) {
 				$gp_pattern = '<a' . $gp_val[1] . 'href=' . $gp_val[2] . $gp_val[3] . '.' . $gp_val[4] . $gp_val[5] . $gp_val[6] . '>';
 				$gp_replacement = '<a' . $gp_val[1] . 'href=' . $gp_val[2] . $gp_val[3] . '.' . $gp_val[4] . $gp_val[5] . ' data-rel="prettyPhoto' . $gp_group . '"' . $gp_val[6] . '>';
-				$gp_content = str_replace( $gp_pattern, $gp_replacement, $gp_content );			
+				$gp_content = str_replace( $gp_pattern, $gp_replacement, $gp_content );
 			}
 			return $gp_content;
 		} else {
 			return $gp_content;
 		}
-	}	
+	}
 }
-add_filter( 'the_content', 'ghostpool_lightbox_image_link' );	
+add_filter( 'the_content', 'ghostpool_lightbox_image_link' );
 add_filter( 'wp_get_attachment_link', 'ghostpool_lightbox_image_link' );
 add_filter( 'bbp_get_reply_content', 'ghostpool_lightbox_image_link' );
 
@@ -1023,7 +1023,7 @@ if ( version_compare( phpversion(), '5.2.4', '>=' ) ) {
 }
 
 if ( ! function_exists( 'ghostpool_register_required_plugins' ) ) {
-	
+
 	function ghostpool_register_required_plugins() {
 
 		$gp_plugins = array(
@@ -1057,7 +1057,7 @@ if ( ! function_exists( 'ghostpool_register_required_plugins' ) ) {
 				'force_activation'	 => false,
 				'force_deactivation' => false,
 			),
-			
+
 			array(
 				'name'   		     => esc_html__( 'Theia Sticky Sidebar', 'socialize' ),
 				'slug'   		     => 'theia-sticky-sidebar',
@@ -1073,19 +1073,19 @@ if ( ! function_exists( 'ghostpool_register_required_plugins' ) ) {
 				'slug'      => 'buddypress',
 				'required' 	=> false,
 			),
-			
+
 			array(
 				'name'      => esc_html__( 'bbPress', 'socialize' ),
 				'slug'      => 'bbpress',
 				'required' 	=> false,
 			),
-						
+
 			array(
 				'name'      => esc_html__( 'The Events Calendar', 'socialize' ),
 				'slug'      => 'the-events-calendar	',
 				'required' 	=> false,
 			),
-												
+
 			array(
 				'name'      => esc_html__( 'Contact Form 7', 'socialize' ),
 				'slug'      => 'contact-form-7',
@@ -1103,20 +1103,20 @@ if ( ! function_exists( 'ghostpool_register_required_plugins' ) ) {
 				'slug'      => 'captcha',
 				'required' 	=> false,
 			),
-			
+
 			array(
 				'name'      => esc_html__( 'Post Views Counters', 'socialize' ),
 				'slug'      => 'post-views-counter',
 				'required' 	=> false,
 			),
-			
+
 			array(
 				'name'      => esc_html__( 'Yoast SEO', 'socialize' ),
 				'slug'      => 'wordpress-seo',
 				'required' 	=> false,
 				'is_callable' => 'wpseo_init',
 			),
-																							
+
 		);
 
 		$gp_config = array(
@@ -1129,11 +1129,105 @@ if ( ! function_exists( 'ghostpool_register_required_plugins' ) ) {
 			'is_automatic' => true,                  // Automatically activate plugins after installation or not.
 			'message'      => '',                     // Message to output right before the plugins table.
 		);
- 
+
 		tgmpa( $gp_plugins, $gp_config );
 
-	}	
+	}
 }
 add_action( 'tgmpa_register', 'ghostpool_register_required_plugins' );
+
+/** Hans From here..
+* Edit Howdy word
+*/
+function my_admin_bar_change_howdy_target( $wp_admin_bar ) {
+        $user_id = get_current_user_id();
+        $current_user = wp_get_current_user();
+        $profile_url = get_edit_profile_url( $user_id );
+        if (substr($profile_url, -5) == 'edit/') {
+                $profile_url = substr($profile_url, 0, -5);
+        }
+
+        if ( 0 != $user_id ) {
+                /* Add the "My Account" menu */
+                $avatar = get_avatar( $user_id, 28 );
+                $howdy = sprintf( __('Welcome, %1$s'), $current_user->display_name );
+                $class = empty( $avatar ) ? '' : 'with-avatar';
+
+                $wp_admin_bar->add_menu( array(
+                        'id' => 'my-account',
+                        'parent' => 'top-secondary',
+                        'title' => $howdy . $avatar,
+                        'href' => $profile_url,
+                        'meta' => array(
+                                'class' => $class,
+                        ),
+                ) );
+
+        }
+}
+add_action( 'admin_bar_menu', 'my_admin_bar_change_howdy_target', 11 );
+
+/** Hide toolbar for users not admin */
+
+function hans_remove_admin_bar() {
+	if( !is_super_admin() )
+		add_filter( 'show_admin_bar', '__return_false' );
+}
+add_action('wp', 'hans_remove_admin_bar');
+/** Redirect bbPress pages to registration page */
+//function hans_page_template_redirect()
+//{
+    //if not logged in and on a bp page except registration or activation
+  //  if( ! is_user_logged_in() && is_bbpress() ) {
+  //      wp_redirect( home_url( '/register/' ) );
+  //      exit();
+  //  }
+//}
+//add_action( 'template_redirect', 'hans_page_template_redirect' );
+
+/** Upload facebook avatar if the user has his/her facebook connected */
+
+add_filter( 'bp_core_fetch_avatar', 'revert_to_default_wp_avatar', 80, 3 );//late load
+function revert_to_default_wp_avatar( $img, $params, $item_id ){
+	//we are concerned only with users
+	if( $params['object']!='user' )
+		return $img;
+
+	//check if user has uploaded an avatar
+	//if not then revert back to wordpress core get_avatar method
+	//remove the filter first, or else it will go in infinite loop
+	remove_filter( 'bp_core_fetch_avatar', 'revert_to_default_wp_avatar', 80, 3 );
+
+	if( !emi_user_has_avatar( $item_id ) ){
+		$width = $params['width'];
+		// Set image width
+		if ( false !== $width ) {
+			$img_width = $width;
+		} elseif ( 'thumb' == $width ) {
+			$img_width = bp_core_avatar_thumb_width();
+		} else {
+			$img_width = bp_core_avatar_full_width();
+		}
+		$img = get_avatar( $item_id, $img_width );
+	}
+
+	//add the filter back again
+	add_filter( 'bp_core_fetch_avatar', 'revert_to_default_wp_avatar', 80, 3 );
+	return $img;
+}
+
+/**
+* Check if the given user has an uploaded avatar
+* @return boolean
+*/
+function emi_user_has_avatar( $user_id=false ) {
+	if( !$user_id ){
+		$user_id = bp_loggedin_user_id();
+	}
+
+	if ( bp_core_fetch_avatar( array( 'item_id' => $user_id, 'no_grav' => true,'html'=> false ) ) != bp_core_avatar_default( 'local' ) )
+		return true;
+	return false;
+}
 
 ?>
